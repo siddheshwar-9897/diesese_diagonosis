@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Doctor Chatbot</title>
+    <style>
+        body {
+            background-image:url('https://www.liveenhanced.com/wp-content/uploads/2019/02/Best-Online-Doctor-Apps.jpg');
+             background-repeat: no-repeat;
+             background-size: cover;
+             background-attachment: fixed;
+             width: 100%;
+             height: 100%;
+             margin: 0%;
+
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        .faq-answer {
+            display: none;
+            padding-top: 5px;
+            color: #555;
+        }
+
+        .faq-question:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(0)">What should I do if I have a persistent headache?</div>
+        <div class="faq-answer">
+            <p>If you have a persistent headache, try to rest and stay hydrated. Avoid stress and bright lights. If the headache continues, please consult a healthcare professional.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(1)">How can I reduce fever at home?</div>
+        <div class="faq-answer">
+            <p>To reduce fever, stay hydrated and rest. You can also use over-the-counter fever reducers like acetaminophen. If your fever is very high or persistent, seek medical advice.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(2)">When should I consult a doctor?</div>
+        <div class="faq-answer">
+            <p>Consult a doctor if you experience severe symptoms, persistent pain, high fever, or any other condition that worries you or does not improve with home care.</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleAnswer(index) {
+        const answers = document.querySelectorAll('.faq-answer');
+        const currentAnswer = answers[index];
+
+        if (currentAnswer.style.display === 'block') {
+            currentAnswer.style.display = 'none';
+        } else {
+            currentAnswer.style.display = 'block';
+        }
+    }
+</script>
+
+</body>
+</html>

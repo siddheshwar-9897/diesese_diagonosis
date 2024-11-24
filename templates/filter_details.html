@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Members List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Members List</h1>
+        <a href="/add" class="btn btn-primary mb-4">Add Member</a>
+        <a href="/" class="btn btn-secondary mb-4">Back</a>
+
+        <!-- Filter Form -->
+        <form method="GET" action="">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <input type="text" name="firstname" class="form-control" placeholder="First Name" value="{{ request.GET.firstname }}">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="lastname" class="form-control" placeholder="Last Name" value="{{ request.GET.lastname }}">
+                </div>
+                <div class="form-group col-md-3">
+                    <input type="text" name="country" class="form-control" placeholder="Country" value="{{ request.GET.country }}">
+                </div>
+                <div class="form-group col-md-3">
+                    <button type="submit" class="btn btn-success btn-block">Filter</button>
+                </div>
+            </div>
+        </form>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Country</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for member in mem %}
+                    <tr>
+                        <td>{{ member.firstname }}</td>
+                        <td>{{ member.lastname }}</td>
+                        <td>{{ member.country }}</td>
+                        <td>
+                            <a href="/update/{{ member.id }}" class="btn btn-warning btn-sm">Update</a>
+                            <a href="/delete/{{ member.id }}" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

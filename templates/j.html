@@ -1,0 +1,157 @@
+
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Disease Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: pink;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .image {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .image img {
+            max-width: 100%;
+            border-radius: 10px;
+        } 
+        .form-container {
+            flex: 1;
+            padding-left: 20px;
+        }
+        .form-container h2 {
+            color: #b22222;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 30%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-buttons button.reset {
+            background-color: #f0f0f0;
+        }
+        .form-buttons button.submit {
+            background-color: #ff7f50;
+            color: white;
+        }
+    </style> 
+</head>
+<body>
+    
+    <div class="container">
+        <div class="image">
+            <img src='C:\Users\91932\OneDrive\Desktop\d jango\secondproject\static\images\image.jpg' >
+        </div> 
+        <div class="form-container">
+            <h2>Disease Prediction</h2>
+          <form method='POST'>
+            {% csrf_token %}
+        
+            <div class="form-group">
+                <label for="Age">Age:</label>
+                <input type="text" id="Age" name="Age">
+            </div>
+            <div class="form-group">
+                <label for="BloodPressure">Blood Pressure (mmHg):</label>
+                <input type="text" id="BloodPressure" name="BloodPressure">
+            </div>
+            <div class="form-group">
+                <label for="Specific Gravity">Skin Thickness:</label>
+                <input type="text" id="Specific Gravity" name="Specific Gravity">
+            </div>
+            <div class="form-group">
+                <label for="Albumin">Insulin (ml U/l):</label>
+                <input type="text" id="Albumin" name="Albumin">
+            </div>
+            <div class="form-group">
+                <label for="Sugar">BMI (kg/m2):</label>
+                <input type="text" id="Sugar" name="Sugar">
+            </div>
+            <div class="form-group">
+                <label for="BloodGlucoseRandom">Diabetes Pedigree Function:</label>
+                <input type="text" id="BloodGlucoseRandom" name="BloodGlucoseRandom">
+            </div>
+            <div class="form-group">
+                <label for="BloodUrea">Age:</label>
+                <input type="text" id="BloodUrea" name="BloodUrea">Blood Urea
+            </div>
+            <div class="form-group">
+                <label for="Serum Creatinineodiums">Age:</label>
+                <input type="text" id="Serum Creatinineodiums" name="Serum Creatinineodiums">Blood Urea
+            </div>
+            <div class="form-group">
+                <label for="Sodiums">Age:</label>
+                <input type="text" id="Sodium" name="Sodiums">Blood Urea
+            </div>
+            <div class="form-group">
+                <label for="Potassium">Age:</label>
+                <input type="text" id="Potassium" name="Potassium">Blood Urea
+            </div>Serum Creatinineodiums
+            <div class="form-group">
+                <label for="Hemoglobin">Age:</label>
+                <input type="text" id="Hemoglobin" name="Hemoglobin">Blood Urea
+            </div>Serum Creatinineodiums
+            <div class="form-group">
+                <label for="PackedCellVolume">Age:</label>
+                <input type="text" id="PackedCellVolume" name="PackedCellVolume">Blood Urea
+            </div>Serum Creatinineodiums
+            <div class="form-group">
+                <label for="WhiteBloodCell">Age:</label>
+                <input type="text" id="WhiteBloodCell" name="WhiteBloodCell">Blood Urea
+            </div>Serum Creatinineodiums
+            <div class="form-group">
+                <label for="RedBloodCell">Age:</label>
+                <input type="text" id="RedBloodCell" name="BloodCell">Blood Urea
+            </div>Serum Creatinineodiums
+            <div class="form-buttons">
+                <button type="reset" class="reset">Reset All</button>
+                <button type="submit" class="submit">Submit Form</button>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

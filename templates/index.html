@@ -1,0 +1,140 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Landing Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href={% static 'in.css' %}>
+</head>
+<body>
+
+<section class="main-header">
+  <div class="overlay">
+    <div class="container">
+      <header>
+        <div class="logo"><img src="https://images.vexels.com/media/users/3/142777/isolated/preview/84711206e52e0d4ff6c793cb476ea264-heartbeat-star-medical-logo-by-vexels.png" alt=""/><span>Sansa</span></div>
+        <div class="nav"><a href='blog'>Blog</a><a href='register/'>Register</a><a class="active" href='login_view/'>Login</a></div>
+        <div class="menu"><i class="fa fa-bars"></i></div>
+      </header>
+      <div class="content">
+        <div class="content-wrapper">
+          <h2 class="blob">Get Answers to medical questions by medical expert, quickly and free.</h2>
+          <div class="button-wrapper">
+            <div class="button work">How it works<span><i class="fa fa-arrow-down"></i></span></div>
+            <div class="button ask"><a href='chatbot'>Ask Your First Question</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="how-it-works">
+  <div class="container">
+    <div class="intro">Are you a doctor or a medical expert?<span>Become an Expert<i class="fa fa-arrow-right"></i></span></div>
+    <div class="slug">getting started only takes a minute</div>
+    <div class="title">How it does it Work?</div>
+    <div class="content">People across the globe use Google Search to find trusted and relevant information about health conditions, symptoms, and treatments. Our information panels cover hundreds of conditions from authoritative sources, from the common cold to muscle strain, headaches, anxiety and more. When you search for symptoms, we show a list of related conditions to help you quickly see where you can do more in-depth research or talk to a health professional.
+    </div>
+    <div class="icon-wrapper">
+      <div class="icon"><i class="fa fa-heart"></i>
+        <p>Create Medical File</p>
+      </div>
+      {% comment %} <div class="icon"><i class="fa fa-question"></i>
+        <p>Ask Your Question</p>
+      </div> {% endcomment %}
+      <div class="icon"><i class="fa fa-comments"></i>
+        <p><a href='dietplan'>Talk to an expert</p>
+      </div>
+      <div class="icon"><i class="fa fa-coffee"></i>
+        <p><a href='dietplan'>Have a better life</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="question">
+  <div class="title">Ask your Medical Question
+    <a href='chatbot'>
+  </div>
+  <div class="content">Ask Question To medical expert by given example,they will give brief or small information to recover from health condition <div>
+  <div class="form">
+    <input type="text" placeholder="fever"/><i class="fa fa-arrow-right"></i>
+  </div>
+</section>
+<section id="talk">
+  <div class="col-wrapper">
+    <div class="col-50">
+      <div class="title">Talk to an Expert</div>
+      <div class="content">This filed provide take one to one assessment from our medical expert which provid you to get online checkup of your health condition,which help you take care of your love one</div>
+      <div class="options">
+        <ul>
+          <li> <span><i class="fa fa-check"></i></span>Chat with an expert</li>
+          <li> <span><i class="fa fa-check"></i></span>Send photos with your question</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-50"></div>
+  </div>
+</section>
+<section id="signup">
+  <div class="slug">Seen enough and reay to get started</div>
+  <div class="title">Talk to a medical expert right now!</div>
+  <div class="content">This filed provide take one to one assessment from our medical expert which provid you to get online checkup of your health condition,which help you take care of your love one</div>
+  </div>
+  <div class="button-wrapper">
+     <a href='register'>
+    <button class="highlight" >Signup Now</button>
+     </a>
+    <a href='contact'>
+    <button>Contact Us</button>
+    </a>
+  </div>
+</section>
+<section class="footer">
+  <div class="container">
+    <div class="col-wrapper">
+      <div class="col-1">
+        <div class="logo"><img src="https://images.vexels.com/media/users/3/142777/isolated/preview/84711206e52e0d4ff6c793cb476ea264-heartbeat-star-medical-logo-by-vexels.png" alt=""/><span>Sansa</span></div>
+      </div>
+      <div class="col-1">
+        <ul>
+          <li><a class="header" href="">More info</a></li>
+          <li><a href="">About Sansa</a></li>
+          <li><a href="terms">Terms and Condition</a></li>
+          <li><a href="question">Frequently asked Questions</a></li>
+        </ul>
+      </div>
+      <div class="col-1">
+        <ul>
+          <li><a class="header" href="contact">Contact Us</a></li>
+          <li><a href="contact">kofiarhin@gmail.com</a></li>
+          <li><a href="">checkout projects</a></li>
+        </ul>
+      </div>
+      <div class="col-1">
+        <ul>
+          <li><a class="header" href="">Medical Advisor</a></li>
+          <li><a href="login_view/">Login</a></li>
+          <li><a href="form">Dashboard</a></li>
+          <li><a href="">Become one</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="social-media">
+  <div class="container">
+    <div class="social-wrapper">
+      <div class="copyright">Copyright © 2016f</div>
+      <div class="icons"><a href="https://www.facebook.com" class="icon-link" target="_blank"></a> <i class="fa fa-facebook"></i>
+        <a href="https://www.twitter.com" class="icon-link" target="_blank"></a>
+        <i class="fa fa-twitter"></i></div>
+      <div class="slug"><span>Made with Love By</span><img src="https://images.vexels.com/media/users/3/142777/isolated/preview/84711206e52e0d4ff6c793cb476ea264-heartbeat-star-medical-logo-by-vexels.png" alt=""/></div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
